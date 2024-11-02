@@ -1,0 +1,459 @@
+/* Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+/* Full-Page Canvas Background */
+#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind all other elements */
+    pointer-events: none; /* Prevent interaction */
+    background: linear-gradient(135deg, #feffff, #fbffff); /* Fallback background */
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    height: 350px;
+    background: linear-gradient(135deg, #17a398, #0a3a32);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    color: white;
+    padding: 20px;
+}
+/* Home Button Styling */
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    color: #17a398;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.header-content {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 40px;
+    text-align: center; /* Keep header elements centered */
+}
+
+.header-gif {
+    position: absolute;
+    top: 50%;
+    right: 20px; /* Align GIF to the right */
+    transform: translateY(-50%); /* Center GIF vertically */
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.home-button:hover {
+    background-color: #128e82;
+    color: white;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.logo {
+    height: 80px;
+    margin-bottom: 20px;
+    animation: spin 15s ease-in-out infinite;
+    
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.header-title {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header-subtitle {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #c1d5db;
+}
+.header-image {
+    width: 50px;
+    
+    margin-top: 20px;
+}
+
+/* Sidebar Section */
+.sidebar {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    margin-bottom: 120px;
+    height:500px;
+    width: 200px;
+    background-color: #17a398;
+    padding: 20px;
+    color: white;
+    height: calc(100% - 120px);
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.category-btn {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    color: #17a398;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category-btn:hover {
+    background-color: #128e82;
+    color: white;
+}
+
+/* Blog Grid */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.blog-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+#simple-footer {
+    background: linear-gradient(135deg, #17a398, #0a3a32);
+    color: white;
+    padding: 40px 20px;
+    height: 300px; /* Sets the footer height */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin-top: 0;
+    padding: 1px;
+    display: flex;
+    justify-content: space-between; /* Spaces sections evenly */
+    align-items: flex-start; /* Aligns sections to the top */
+}
+
+/* Left Section: Logo and Description */
+.footer-left {
+    display: flex;
+    flex-direction: column; /* Stacks logo and description */
+    gap: 5px; /* Adds space between logo and text */
+    text-align: center; /* Centers text under logo */
+    flex: 1; /* Takes up one part of the total width */
+}
+
+.flogo {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+    margin-left: 140px; /* Moves the logo towards the center */
+    animation: spin 15s ease-in-out infinite; /* Rotates the logo */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Center Section: Newsletter and Contact */
+.footer-center {
+    flex-direction: column;
+    align-items: center; /* Centers newsletter and contact */
+    text-align: center;
+    flex: 2; /* Takes up more space in the middle */
+    padding-left: 100px; /* Adds extra space to the left */
+}
+
+.footer-newsletter {
+    margin-bottom: 20px; /* Space between newsletter and contact */
+}
+
+.footer-newsletter h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.footer-newsletter form {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    color: #0a3a32;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-newsletter button:hover {
+    background-color: #c1d5db; /* Changes color on hover */
+}
+
+/* Contact Details */
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    margin: 5px 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.footer-contact i {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+/* Right Section: WhatsApp Link */
+.whatsapp-link {
+    position: fixed;
+    bottom: 80px;
+    right: 100px;
+    z-index: 1000; /* Ensures it appears above other elements */
+}
+
+/* Social Icons */
+.social-icons {
+    font-size: 30px;
+    color: white;
+}
+/* WhatsApp Button Styling */
+.whatsapp-link a {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25d366;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.whatsapp-link a:hover {
+    background-color: #1ebe57;
+    transform: scale(1.05);
+}
+@media (max-width: 480px) {
+    /* Footer Background */
+    #simple-footer {
+        padding: 20px;
+        min-height: 450px;
+    }
+
+    /* Footer Container aligned to the left */
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Ensures left alignment */
+        padding: 0;
+        width: 100%;
+        gap: 15px;
+    }
+
+    /* Align Logo and Description to the Left */
+    .footer-left {
+        text-align: left;
+        width: 100%;
+        padding: 0; /* Remove padding */
+        margin-bottom: 15px;
+    }
+
+    .footer-description {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-top: 10px;
+    }
+
+    /* Left-aligned Newsletter Form */
+    .footer-newsletter {
+      
+        display:none;
+       
+        
+        /* Remove padding */
+    }
+
+    .footer-newsletter h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .footer-newsletter form {
+       display:none;
+    }
+
+    
+    /* Align Contact Details Directly Below Newsletter */
+    .footer-contact {
+        text-align: left;
+        margin-top: 10px;
+        padding: 0; /* Remove padding */
+        width: 100%;
+    }
+
+    .footer-contact p {
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 5px 0;
+    }
+
+    /* Align Social Icons to the Left */
+    .social-icons {
+        display: flex;
+        gap: 15px;
+        font-size: 20px;
+        margin-top: 10px;
+        padding: 0; /* Remove padding */
+    }
+
+     /* WhatsApp Button */
+     .whatsapp-link {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        font-size: 1.2rem;
+        background-color: #25d366;
+        color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+    .sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly; /* Space the buttons evenly */
+        gap: 10px; /* Add spacing between buttons */
+        padding: 20px; /* Add padding for neat layout */
+        background-color: transparent;
+        width: 100%;
+        height: auto;
+        margin-top: 20px; /* Push buttons below the header */
+        position: static; /* Remove absolute positioning */
+        border-color: #17a398;
+
+    }
+
+    .category-btn {
+        flex: 1 1 calc(45% - 20px); /* Two buttons per row */
+        margin: 5px 0;
+        font-size: 1rem;
+        text-align: center;
+        padding: 15px;
+        background-color: white;
+        color: #17a398;
+        border-color: #17a398;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .category-btn:hover {
+        background-color: #128e82;
+        color: white;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hover shadow effect */
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .header-subtitle {
+        font-size: 1rem;
+    }
+
+    .home-button {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1.8rem;
+    }
+
+    .header-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .category-btn {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .home-button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
