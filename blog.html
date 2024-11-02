@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <title>Blog - CyberNovaAI</title>
+    <link rel="stylesheet" href="blogstyle.css">
+</head>
+
+<body>
+    <!-- Full-Page Animated Background -->
+<canvas id="backgroundCanvas"></canvas>
+
+<!-- Main Content Wrapper -->
+<div class="content-wrapper">
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <a href="G:\the webstie\index.html" class="home-button">Home</a>
+            <img src="bassets/logo.png" alt="CyberNovaAI Logo" class="logo">
+            <h1 class="header-title">Explore the Future of Digital Marketing</h1>
+            <p class="header-subtitle">Insights, trends, and strategies to elevate your business.</p>
+            <!-- Adding the GIF inside the header -->
+            <img src="bassets/ai-animation.gif" alt="AI in Marketing" class="header-gif">
+        </div>
+    </header>
+</div>
+
+
+        <!-- Sidebar for Categories -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <button class="category-btn" onclick="filterBlogs('all')">All</button>
+            <button class="category-btn" onclick="filterBlogs('AI')">AI</button>
+            <button class="category-btn" onclick="filterBlogs('SEO')">SEO</button>
+            <button class="category-btn" onclick="filterBlogs('Social Media')">Social Media</button>
+        </aside>
+
+        <!-- Blog Grid -->
+        <div class="blog-container" id="blogContainer">
+            <div class="blog-card" data-category="AI">
+                <a href="aiindigital.html">
+                    <img src="bassets/robotjob.jpg" alt="AI in Marketing" class="blog-image">
+                    <div class="blog-content">
+                        <h2>The Power of AI</h2>
+                        <p>How AI is transforming customer interactions.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="blog-card" data-category="SEO">
+                <a href="mistry.html">
+                    <img src="bassets/portrait-person-ai-robot.jpg" alt="SEO Optimization" class="blog-image">
+                    <div class="blog-content">
+                        <h2>ai is changing the wotld, stay ahead with AI</h2>
+                        <p>AI and the Future: Why Partnering with AI is the Smartest Move.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="blog-card" data-category="SEO">
+                <a href="seo.html">
+                    <img src="bassets/digitalbook.jpg" alt="SEO Optimization" class="blog-image">
+                    <div class="blog-content">
+                        <h2>Mastering SEO in 2024</h2>
+                        <p>Stay ahead with AI-powered SEO strategies.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="blog-card" data-category="SEO">
+                <a href="social.html">
+                    <img src="bassets/social.jpg" alt="SEO Optimization" class="blog-image">
+                    <div class="blog-content">
+                        <h2>how to use the social media for your business</h2>
+                        <p>social media is the future, how to use the magic .</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="blog-card" data-category="SEO">
+                <a href="content.html">
+                    <img src="bassets/contact.jpg" alt="SEO Optimization" class="blog-image">
+                    <div class="blog-content">
+                        <h2>how to create engaging content</h2>
+                        <p>A good content strategy is key to success in digital marketing.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="simple-footer">
+            <div class="footer-container">
+                <!-- Left-aligned logo and description -->
+                <div class="footer-left">
+                    <img src="bassets/logo.png" alt="Company Logo" class="flogo">
+                    
+                    <p class="footer-description">At CyberNova AI, we light up your digital journey with strategies that work. Our team of experts leverages data and innovation to connect you with the right audience, build your brand, and fuel your success. With solutions customized to your goals, CyberNova AI will make your brand shine among the stars</p>
+                </div>
+            
+                <!-- Centered newsletter and contact info -->
+                <div class="footer-center">
+                    <div class="footer-newsletter">
+                        <h3>Subscribe to our Newsletter</h3>
+                        <form action="">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="footer-contact">
+                        <p><i class="fa fa-phone"></i> Phone: +201143512475</p>
+                        <p><i class="fa fa-envelope"></i> Email: admin@cybernovaai.com</p>
+                        <p><i class="fa fa-map-marker"></i> Address: 6 OCTOBER, GIZA</p>
+                    </div>
+                <div class="social-icons">
+                    
+                    <a href="https://www.facebook.com/cybernovaai" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
+                    
+                        <a href="https://www.instagram.com/cybernovaai/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://twitter.com/cybernovaai" ><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/cybernovaai"><i class="fa-brands fa-linkedin"></i></a>
+                   
+                </div>
+                <div class="whatsapp-link">
+                    <a href="https://wa.me/+201221781954" target="_blank">
+                        <i class="fa-brands fa-whatsapp" style="color: #63E6BE;"></i>  WhatsApp
+                    </a>
+                </div>
+            </div>
+        </footer>
+        
+    </body>
+    </html>
+    
+    </div>
+
+    <script src="blogscript.js"></script>
+</body>
+
+</html>
